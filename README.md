@@ -1,6 +1,6 @@
 # docker-service
 
-[![Build Status](https://travis-ci.org/danmademe/docker-service.svg?branch=master)](https://travis-ci.org/danmademe/docker-service)
+[![Build Status](https://travis-ci.org/danmademe/docker-service.svg?branch=master)](https://travis-ci.org/danmademe/docker-service)  [![Coverage Status](https://coveralls.io/repos/github/danmademe/docker-service/badge.svg?branch=master)](https://coveralls.io/github/danmademe/docker-service?branch=master)
 
 builds debs from docker files using fmt
 
