@@ -1,6 +1,6 @@
 containers:
-  - name: tidal-test-yaml
-    image: docker.tidal.com/tidal-test-yaml:1.0.0
+  - name: test-yaml
+    image: repo/test-yaml:1.0.0
     ports:
       - hostPort: 9000
         containerPort: 9000
@@ -10,7 +10,7 @@ containers:
         value: test
 network: host
 control:
-    package: tidal-test-yaml
+    package: test-yaml
     version: 1.0.0
     section: misc
     priority: optional

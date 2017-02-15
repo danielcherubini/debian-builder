@@ -7,7 +7,7 @@ func TestLoadConfigToModel(t *testing.T) {
 	if err != nil {
 		t.Fail()
 	}
-	if config.Control.Package != "tidal-test-yaml" {
+	if config.Control.Package != "test-yaml" {
 		t.Fail()
 	}
 }

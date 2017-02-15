@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/danmademe/docker-service/models"
+	"github.com/danmademe/debian-builder/models"
 	"github.com/ghodss/yaml"
 )
 
@@ -23,19 +23,19 @@ func loadConfigToModel(file string) (models.Config, string, error) {
 }
 
 func buildDebianPackage(control models.Control, fileName string) *exec.Cmd {
-	args := []string{"-s dir", "-t deb"}
+	args := []string{"-s", "dir", "-t", "deb"}
 
 	//Setup Name
-	name := "-n " + control.Package + "-" + control.Distribution
-	args = append(args, name)
+	name := control.Package + "-" + control.Distribution
+	args = append(args, "-n", name)
 
 	//Setup version
-	version := "-v " + control.Version
-	args = append(args, version)
+	version := control.Version
+	args = append(args, "-v", version)
 
 	//Setup After Install
-	afterInstall := "--after-install .postinst"
-	args = append(args, afterInstall)
+	afterInstall := ".postinst"
+	args = append(args, "--after-install", afterInstall)
 
 	//Setup Config
 	config := fileName + "=/etc/docker-service/services.d/" + control.Package + "_" + control.Version + ".yaml"

@@ -6,9 +6,6 @@ env:
   - "PATH=/home/travis/gopath/bin:$PATH"
 before_install:
     - go get github.com/mitchellh/gox
-    - go get github.com/tcnksm/ghr
-    - go get github.com/axw/gocov/gocov
-    - go get code.google.com/p/go.tools/cmd/cover
     - go get github.com/mattn/goveralls
     - go get -d -v ./...
 script:
@@ -23,10 +20,10 @@ deploy:
     api_key:
         secure: aBu0TeTxdAombKC0gB6ODwwr8XdJ9TCYEzoLLZLQcIxQL5JojZIFItFQBwMb//8WLaI04fRsADIoU8CF8GjPmTy1zog91iDspktnXTFdr3ADQucU5QHANmprOUX1noEGNryMZl8HWTMgiysm/iB4GgEC6y477hm8t3P3Lv4iRWjYN9rxMvqDrFOiOkALsHfhfacJsGpNVqFGv4ON3cyUjI8mMmUoww4Vyz+JzxAs+RrLYjZTvynrCgx6XGgkSNBwKA+VMkIYioFpSfbXlTJ1SxKdPGnc0S5Q0y84dnBG/epD9Rm4f1Ki+DXQ0zTvvs6Fw1slXcELvB/bEqzTuRkEPuPhMN5lA9tV7T31rAklFc1FgGWNsU7lytrhwAzUthMPJ4g+qekALQhiWsHFQm9pXQ6q6uuRleyGocAnDezkPgaKopRUlDONiRrYsDJbQ/o1has55DH8hNr32PG8WnRLiu12EtM1uBhXjgKL9sNTfSTOr3DHW4SVsapfuJq16S8Y8QcdN5Hw+7x4CiD2qA22661oXJs/us07jJJ04KfHN4RWEPTlkdmndXAegt1pzRGNgrdaf4e0ovgD31CuM8yLqaY/nqKgdj9lyt9mnTgOgw9D6qz0jhJGj1mIJsPUncqGS6KVfwqxpUZo5xQHGsKdcS5BWHaRUzIVb2QojOE4axk=
     file:
-        - release/docker-service-linux-amd64
-        - release/docker-service-linux-386
-        - release/docker-service-linux-arm
+        - release/debian-builder-linux-amd64
+        - release/debian-builder-linux-386
+        - release/debian-builder-linux-arm
     on:
-        repo: danmademe/docker-service
+        repo: danmademe/debian-builder
         tags: true
         branch: master

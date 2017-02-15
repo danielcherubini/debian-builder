@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/danmademe/docker-service/models"
+	"github.com/danmademe/debian-builder/models"
 )
 
 func TestConfig(t *testing.T) {
 	config := models.Config{}
-	input := []byte(`{"containers":[{"env":[{"name":"ENV","value":"test"}],"image":"docker.tidal.com/tidal-test-yaml:1.0.0","name":"tidal-test-yaml","ports":[{"containerPort":9000,"hostPort":9000,"protocol":"tcp"}]}],"network":"host"}`)
+	input := []byte(`{"containers":[{"env":[{"name":"ENV","value":"test"}],"image":"repo/test-yaml:1.0.0","name":"test-yaml","ports":[{"containerPort":9000,"hostPort":9000,"protocol":"tcp"}]}],"network":"host"}`)
 	err := json.Unmarshal(input, &config)
 	if err != nil {
 		return
@@ -19,7 +19,7 @@ func TestConfig(t *testing.T) {
 	testPorts := container.Ports
 	testImage := container.Image
 
-	if testImage != "docker.tidal.com/tidal-test-yaml:1.0.0" {
+	if testImage != "repo/test-yaml:1.0.0" {
 		t.Errorf("Config Model Image Error", testImage)
 	}
 

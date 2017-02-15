@@ -1,12 +1,12 @@
-# docker-service
+# debian-builder
 
-[![Build Status](https://travis-ci.org/danmademe/docker-service.svg?branch=master)](https://travis-ci.org/danmademe/docker-service)  [![Coverage Status](https://coveralls.io/repos/github/danmademe/docker-service/badge.svg?branch=master)](https://coveralls.io/github/danmademe/docker-service?branch=master)
+[![Build Status](https://travis-ci.org/danmademe/debian-builder.svg?branch=master)](https://travis-ci.org/danmademe/debian-builder)  [![Coverage Status](https://coveralls.io/repos/github/danmademe/debian-builder/badge.svg?branch=master)](https://coveralls.io/github/danmademe/debian-builder?branch=master)
 
 builds debs from docker files using fmt
 
 ## Usage
 
-`docker-service --config .docker-service.yaml`
+`debian-builder --config .debian-builder.yaml`
 
 params
 
@@ -15,5 +15,5 @@ Config: STRING
 
 ## Install using
 ```sh
-curl -Ls https://raw.githubusercontent.com/danmademe/docker-service/master/install.sh | sudo -H sh
+curl -Ls https://raw.githubusercontent.com/danmademe/debian-builder/master/install.sh | sudo -H sh
 ```
