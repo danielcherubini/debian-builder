@@ -1,7 +1,5 @@
 language: go
 sudo: required
-services:
-    - docker
 go:
     - 1.7.4
 before_install:
@@ -15,7 +13,7 @@ deploy:
     skip_cleanup: true
     provider: releases
     api_key:
-        secure: SI6lDSW2lEhBqPprq4hsoBciIDDyTNCfJ5lM/bkOcqwtoVMh08dlyUA5y6EHSTR9q97xM4J2RHZkOkbevkQ6DfyURCB6eck1qXcUHxUGVfBn8NLmp22CDnAW169hD84nIKYjOSdrHJYUjqIK6RHMAVM9XEIzNforYfYoH1DAOwE0V5Zrany9bkKRpuFOqyZYipy4XD7VC/eCGOu4iybRLPBQQme9hcqFFniIwlW+Y+tRkGZJgbnZ5iGxWgFAu49RZbTCzF5dq1NklDNU5sST6R1naJ0cU3ljvQTffnTnzAdIz0Y8R9U4fsWuDrOeQz8XKL0i/Ngzt9oth/e/LDoSPZP36CHjPI9fNGVnCVttkYhqxWSEodkU5vEAlin2bkbnIge/OQymAg2IM5pPKZQQRZx/pYujahm6mF6LfMgxfIYPkx1gJ/2GtFTWpk5ivXbKJ9cUTTFzcQ6Jidvj0qVFdlb44KlnQkNBGeUWGX4xugEKHHzzdFIRjOXMYh5/yKFyO+fQWNprJYBxu45E09BJ1LaXlCHPJYj0Ht3uE74UqT+S3edJkZ3Rnzl5HitYwA3fSk7ofLKy+lk/gXuSpFT+iF+zG42UEaFlvCNyWrZFlY56Zp1UP9tMf4uWzlqg9rct8xmjX8PiwdSfr0lBx3+8q6tWdJ9rfPtDEzmTA58sry8=
+            secure: aBu0TeTxdAombKC0gB6ODwwr8XdJ9TCYEzoLLZLQcIxQL5JojZIFItFQBwMb//8WLaI04fRsADIoU8CF8GjPmTy1zog91iDspktnXTFdr3ADQucU5QHANmprOUX1noEGNryMZl8HWTMgiysm/iB4GgEC6y477hm8t3P3Lv4iRWjYN9rxMvqDrFOiOkALsHfhfacJsGpNVqFGv4ON3cyUjI8mMmUoww4Vyz+JzxAs+RrLYjZTvynrCgx6XGgkSNBwKA+VMkIYioFpSfbXlTJ1SxKdPGnc0S5Q0y84dnBG/epD9Rm4f1Ki+DXQ0zTvvs6Fw1slXcELvB/bEqzTuRkEPuPhMN5lA9tV7T31rAklFc1FgGWNsU7lytrhwAzUthMPJ4g+qekALQhiWsHFQm9pXQ6q6uuRleyGocAnDezkPgaKopRUlDONiRrYsDJbQ/o1has55DH8hNr32PG8WnRLiu12EtM1uBhXjgKL9sNTfSTOr3DHW4SVsapfuJq16S8Y8QcdN5Hw+7x4CiD2qA22661oXJs/us07jJJ04KfHN4RWEPTlkdmndXAegt1pzRGNgrdaf4e0ovgD31CuM8yLqaY/nqKgdj9lyt9mnTgOgw9D6qz0jhJGj1mIJsPUncqGS6KVfwqxpUZo5xQHGsKdcS5BWHaRUzIVb2QojOE4axk=
     file:
         - release/docker-service-linux-amd64
         - release/docker-service-linux-386
