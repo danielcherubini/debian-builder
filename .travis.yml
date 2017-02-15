@@ -23,4 +23,4 @@ deploy:
     on:
         repo: danmademe/docker-service
         tags: true
-        all_branches: true
+        branch: master
