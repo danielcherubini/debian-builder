@@ -6,7 +6,7 @@ builds debs from docker files using fmt
 
 ## Usage
 
-`debian-builder --config .debian-builder.yaml`
+`debian-builder --config .docker-service.yaml`
 
 params
 
