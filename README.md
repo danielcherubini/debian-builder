@@ -12,3 +12,8 @@ params
 
 Config: STRING
 `--config filename.yaml`
+
+## Install using
+```sh
+curl -Ls https://raw.githubusercontent.com/danmademe/docker-service/master/install.sh | sudo -H sh
+```
