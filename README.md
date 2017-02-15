@@ -1,5 +1,7 @@
 # docker-service
 
+[![Build Status](https://travis-ci.org/danmademe/docker-service.svg?branch=master)](https://travis-ci.org/danmademe/docker-service)
+
 builds debs from docker files using fmt
 
 ## Usage
