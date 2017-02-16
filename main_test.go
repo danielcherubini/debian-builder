@@ -22,3 +22,13 @@ func TestBuildDebianPackage(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestRunEverything(t *testing.T) {
+	config, filepath := setupEnvironment()
+	if config.Package == "" {
+		t.Fail()
+	}
+	if filepath == "" {
+		t.Fail()
+	}
+}
