@@ -9,10 +9,11 @@ type Config struct {
 
 //Containers ldfdf
 type Containers struct {
-	Name  string `json:"name"`
-	Image string `json:"image"`
-	Ports []Port `json:"ports"`
-	Env   []Env  `json:"env"`
+	Name  string   `json:"name"`
+	Image string   `json:"image"`
+	Ports []Port   `json:"ports"`
+	Links []string `json:"links"`
+	Env   []Env    `json:"env"`
 }
 
 //Control is the control file

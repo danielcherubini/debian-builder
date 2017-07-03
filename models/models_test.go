@@ -9,10 +9,10 @@ import (
 
 func TestConfig(t *testing.T) {
 	config := models.Config{}
-	input := []byte(`{"containers":[{"env":[{"name":"ENV","value":"test"}],"image":"repo/test-yaml:1.0.0","name":"test-yaml","ports":[{"containerPort":9000,"hostPort":9000,"protocol":"tcp"}]}],"network":"host"}`)
+	input := []byte(`{"containers":[{"env":[{"name":"ENV","value":"test"}],"image":"repo/test-yaml:1.0.0","name":"test-yaml","links":["farts"],"ports":[{"containerPort":9000,"hostPort":9000,"protocol":"tcp"}]}],"network":"host"}`)
 	err := json.Unmarshal(input, &config)
 	if err != nil {
-		return
+		t.Errorf("Error Marsheling json ", err)
 	}
 	container := config.Containers[0]
 	testEnv := container.Env

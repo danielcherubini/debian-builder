@@ -8,6 +8,8 @@ containers:
     env:
       - name: 'ENV'
         value: test
+    links:
+      - farts
 network: host
 control:
     package: test-yaml

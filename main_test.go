@@ -1,9 +1,13 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestLoadConfigToModel(t *testing.T) {
 	config, _, err := loadConfigToModel("test.yaml")
+	fmt.Println(config)
 	if err != nil {
 		t.Fail()
 	}
